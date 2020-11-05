@@ -1,0 +1,87 @@
+.FullPost {
+    width: 80%;
+    margin: 20px auto;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    text-align: center;
+}
+
+.GoBack {
+    width: 10%;
+    height: 30px;
+    font-size: 1.2rem;
+    margin: 20px auto;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 3px #ccc;
+    text-align: center;
+}
+
+.ShowAnswersButton {
+    box-sizing: border-box;
+    font-size: 16px;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+    outline: none;
+    color: royalblue;
+}
+
+.ShowAnswer {
+    font-weight: bold;
+    color: #521751;
+}
+
+textarea {
+    display: block;
+    width: 60%;
+    box-sizing: border-box;
+    border: 1px solid black;
+    outline: none;
+    font: inherit;
+    margin: auto;
+}
+
+.Edit label {
+    display: block;
+    color: grey;
+}
+
+.Edit button {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+    color: #fa923f;
+}
+
+.Edit button:hover,
+.Edit button:active {
+    color: #521751;
+}
+
+.Edit button.Answer {
+    font-size: 18px;
+    font-weight: bold;
+    color: royalblue;
+}
+
+.Edit button.Answer:hover,
+.Edit button.Answer:active {
+    color: darkred;
+}
+
+@media (max-width: 499px) {
+    .GoBack {
+        width: 30%;
+        height: 30px;
+        font-size: 1.2rem;
+        margin: 20px auto;
+        padding: 5px;
+        cursor: pointer;
+        border: 1px solid #eee;
+        box-shadow: 0 2px 3px #ccc;
+        text-align: center;
+    }
+}
