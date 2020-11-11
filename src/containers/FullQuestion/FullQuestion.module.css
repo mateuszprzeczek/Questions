@@ -85,3 +85,16 @@ textarea {
         text-align: center;
     }
 }
+@media (min-width: 500px) and (max-width: 781px) {
+    .GoBack {
+        width: 30%;
+        height: 30px;
+        font-size: 1.2rem;
+        margin: 20px auto;
+        padding: 5px;
+        cursor: pointer;
+        border: 1px solid #eee;
+        box-shadow: 0 2px 3px #ccc;
+        text-align: center;
+    }
+}
