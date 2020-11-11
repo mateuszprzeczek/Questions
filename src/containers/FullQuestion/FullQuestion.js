@@ -70,9 +70,7 @@ const FullPost = (props) => {
                     author={a.author}
                     date={a.date}
                     content={a.answer}
-                >
-                    lalala
-                </Answer>
+                />
             );
         });
     }
