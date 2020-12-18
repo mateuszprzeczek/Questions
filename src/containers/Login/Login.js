@@ -91,6 +91,10 @@ const Login = (props) => {
         props.onLogin(loginForm.email.value, loginForm.password.value, isLoggedIn);
     };
 
+    const guestLoginHandler = () => {
+        props.onLogin('test@test.pl', 'password', isLoggedIn);
+    }
+
     const switchLoginModeHandler = () => {
         setIsLoggedIn(!isLoggedIn);
     };
@@ -142,6 +146,9 @@ const Login = (props) => {
             </form>
             <Button clicked={switchLoginModeHandler} btnType="Danger">
                 {isLoggedIn ? "Don't have an account yet? Sign Up" : "Already Registered? login"}
+            </Button>
+            <Button btnType="Success" clicked={guestLoginHandler}>
+            LOG IN AS A GUEST
             </Button>
         </div>
     );

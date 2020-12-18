@@ -17,3 +17,11 @@
         width: 500px;
     }
 }
+
+@media (max-width: 499px) {
+    .Login {
+        width: 98vw;
+        margin: 0 auto;
+    }
+
+}

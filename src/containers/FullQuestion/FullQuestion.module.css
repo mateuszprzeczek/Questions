@@ -1,31 +1,56 @@
 .FullPost {
-    width: 80%;
+    width: 60%;
     margin: 20px auto;
     border: 1px solid #eee;
     box-shadow: 0 2px 3px #ccc;
     text-align: center;
 }
 
+.ButtonsContainer {
+    width: 50vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
 .GoBack {
-    width: 10%;
+    width: 30%;
     height: 30px;
     font-size: 1.2rem;
     margin: 20px auto;
     padding: 5px;
     cursor: pointer;
     border: 1px solid #eee;
+    border-radius: 2px;
     box-shadow: 0 2px 3px #ccc;
     text-align: center;
+    transition: all 0.2s ease-in-out;
+}
+
+.GoBack:hover {
+    background-color: mediumturquoise;
+    border-radius: 2px;
 }
 
 .ShowAnswersButton {
+    margin: 0 auto;
     box-sizing: border-box;
     font-size: 16px;
-    border: none;
-    background-color: #ccc;
+    padding: 5px;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 3px #ccc;
     cursor: pointer;
     outline: none;
     color: royalblue;
+    transition: all 0.2s ease-in-out;
+}
+
+.ShowAnswersButton:hover {
+    color: #333;
+    background-color: royalblue;
 }
 
 .ShowAnswer {
@@ -38,6 +63,7 @@ textarea {
     width: 60%;
     box-sizing: border-box;
     border: 1px solid black;
+    border-radius: 2px;
     outline: none;
     font: inherit;
     margin: auto;
@@ -47,6 +73,7 @@ textarea {
     display: block;
     color: grey;
 }
+
 
 .Edit button {
     border: none;
@@ -61,15 +88,27 @@ textarea {
     color: #521751;
 }
 
-.Edit button.Answer {
+
+.Submit {
     font-size: 18px;
+    padding: 5px;
+    border: none;
+    background-color: white;
     font-weight: bold;
     color: royalblue;
+    border: 1px solid #eee;
+    border-radius: 2px;
+    box-shadow: 0 2px 3px #ccc;
+    transition: all 0.2s;
 }
 
-.Edit button.Answer:hover,
-.Edit button.Answer:active {
-    color: darkred;
+.Submit:hover {
+    color: gold;
+    font-size: 22px;
+    cursor: pointer;
+    background-color: cornflowerblue;
+    border-radius: 2px;
+
 }
 
 @media (max-width: 499px) {
@@ -84,7 +123,22 @@ textarea {
         box-shadow: 0 2px 3px #ccc;
         text-align: center;
     }
+
+    .FullPost {
+        width: 100%;
+        margin: 20px auto;
+        border: 1px solid #eee;
+        box-shadow: 0 2px 3px #ccc;
+        text-align: center;
+    }
+
+
+    .ButtonsContainer {
+        width: 100vw;
+        justify-content: space-between;
+    }
 }
+
 @media (min-width: 500px) and (max-width: 781px) {
     .GoBack {
         width: 30%;
@@ -97,4 +151,14 @@ textarea {
         box-shadow: 0 2px 3px #ccc;
         text-align: center;
     }
+
+    .FullPost {
+        width: 80%;
+        margin: 20px auto;
+        border: 1px solid #eee;
+        box-shadow: 0 2px 3px #ccc;
+        text-align: center;
+    }
+
+
 }

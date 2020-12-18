@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "../../axios";
 import { connect } from "react-redux";
-
+import faker from "faker";
 import Answer from "../../components/UI/Answer/Answer";
 import classes from "./FullQuestion.module.css";
 
@@ -78,14 +78,13 @@ const FullPost = (props) => {
     let showAnswers = null;
     if (fetchedAnswer) {
         showAnswers = (
-            <div>
                 <button
                     className={classes.ShowAnswersButton}
                     onClick={showAnswerHandler}
                 >
                     Show Answers
                 </button>
-            </div>
+            
         );
     }
 
@@ -99,7 +98,7 @@ const FullPost = (props) => {
                 <div className={classes.FullPost}>
                     <h1>{loadedQuestion.title}</h1>
                     <p>{loadedQuestion.body}</p>
-                    <div>{showAnswers}</div>
+                    
                     {props.isAuth ? (
                         <React.Fragment>
                             <div>
@@ -126,20 +125,24 @@ const FullPost = (props) => {
                                     setAuthor(event.target.value)
                                 }
                             />
-                            <div className={classes.Edit}>
-                                <button
-                                    onClick={answerHandler}
-                                    className={classes.Answer}
-                                >
-                                    Submit
-                                </button>
-                            </div>
                         </React.Fragment>
                     ) : null}
                 </div>
+                <div className={classes.ButtonsContainer}>
+                                {answer=== "" || author === "" ? null :<button
+                                    onClick={answerHandler}
+                                    className={classes.Submit}
+                                >
+                                    Submit
+                                </button>}
+                            </div>
+                <div className={classes.ButtonsContainer}>
+                {showAnswers}
                 <div className={classes.GoBack} onClick={props.history.goBack}>
                     Go Back
                 </div>
+                </div>
+                
                 {downloadedAnswers}
             </React.Fragment>
         );
